@@ -13,7 +13,7 @@
  ┃ ┃ ┃ 📝 (codes)
  ┃ ┃ ┗ 📝 (codes README)
  ┃ ┣ 📂 recipe
- ┃ ┃ ┃ 📝 (codes)
+ ┃ ┃ ┃ 📝 (explanation README)
  ┃ ┃ ┗ 📝 (review README)
  ┃ ┗ 📝 (today's problems README)
  ┃
