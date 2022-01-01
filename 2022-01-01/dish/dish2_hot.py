@@ -11,5 +11,26 @@ from sys import stdin
 
 read = stdin.readline
 
-if __name__ == "__main__":
-    pass
+
+str = input().rstrip()
+
+def isUPCP():
+    answer = "UCPC"
+    findIndex = 0
+
+    for s in str:
+        if s == answer[findIndex]:
+            findIndex += 1
+        
+        if findIndex == len(answer):
+            return True
+    
+    return False
+    
+    
+
+if isUPCP():
+    print("I love UCPC")
+else:
+    print("I hate UCPC")
+
