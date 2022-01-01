@@ -5,11 +5,11 @@
 |   Cook    |              Recipe              |
 | :-------: | :------------------------------: |
 | WhiteHyun | [🎉작성완료🎉](./dish1_white.md) |
-| hotbreakb |   [✍️작성중✍️](./dish1_hot.md)   |
+| hotbreakb |  [🎉작성완료🎉](./dish1_hot.md)  |
 
 ## UCPC는 무엇의 약자일까?
 
 |   Cook    |              Recipe              |
 | :-------: | :------------------------------: |
 | WhiteHyun | [🎉작성완료🎉](./dish2_white.md) |
-| hotbreakb |   [✍️작성중✍️](./dish2_hot.md)   |
+| hotbreakb |  [🎉작성완료🎉](./dish2_hot.md)  |
