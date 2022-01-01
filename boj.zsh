@@ -33,7 +33,7 @@ problem_name=$(curl -s -N "$problem_link" | sed -n "s/^.*<title>\(.*\)<\/title>.
 today=$(date "+%Y/%m/%d")
 today_folder=$(date "+%Y-%m-%d")
 
-solution_file="$DIR/$today_folder/dish${dish_number}_${nick_name}.py"
+solution_file="$DIR/$today_folder/dish/dish${dish_number}_${nick_name}.py"
 
 
 
