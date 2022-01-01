@@ -15,7 +15,6 @@ def getMinPrice(dList, pList):
     sumOfDistance = sum(dList)
     # 저렴한 가격대로 정렬
     inexpensivePriceList = sorted(pList)
-    # 구매한 기름 리터 수
     # 구매한 곳의 맨끝 위치
     perchasedOilLastIndex = len(pList) - 1
     # 저렴한 가격대부터 구매한다.
