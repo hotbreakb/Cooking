@@ -5,4 +5,4 @@
 |   Cook    |             Dishes             |
 | :-------: | :----------------------------: |
 | WhiteHyun | [✍️작성중✍️](./dish1_white.py) |
-| hotbreakb |  [✍️작성중✍️](./dish1_hot.py)  |
+| hotbreakb | [🎉작성완료🎉](./dish1_hot.py) |
