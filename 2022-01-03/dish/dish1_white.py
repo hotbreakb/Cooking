@@ -12,7 +12,7 @@ from sys import stdin
 read = stdin.readline
 
 if __name__ == "__main__":
-    while (value := read()) :
+    while value := read():
         count = 1
         number = int(value)
         div_number = 1  # 1, 11, 111, 1111...
