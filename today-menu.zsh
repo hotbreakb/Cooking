@@ -2,12 +2,16 @@
 
 # 오늘의 메뉴를 만들어주는 스크립트.
 #
-# 사용법: ./today-menu.zsh
+# 사용법: ./today-menu.zsh [년] [월] [일]
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
+if [ "$#" -eq 0 ]; then
+  today=$(date "+%Y-%m-%d")
+else
+  today="$1-$2-$3"
+fi
 # today's date
-today=$(date "+%Y-%m-%d")
 
 
 # folder
