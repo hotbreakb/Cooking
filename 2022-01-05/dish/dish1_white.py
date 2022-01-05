@@ -15,8 +15,10 @@ if __name__ == "__main__":
     alphabets = [0] * 26
     for char in read().rstrip().upper():
         alphabets[ord(char) - 65] += 1
-    if alphabets.count(alphabets[(index := alphabets.index((max(alphabets))))]) > 1:
+
+    frequeny_number = max(alphabets)
+    if alphabets.count(frequeny_number) > 1:
         print("?")
     else:
-
+        index = alphabets.index(frequeny_number)
         print(chr(65 + index))
