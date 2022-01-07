@@ -11,16 +11,17 @@ from sys import stdin
 
 read = stdin.readline
 
+MAX = 100000
+sumList = [0] * (MAX + 1)
+result = 0
+
+for i in range(1, MAX + 1):
+    result += (MAX // i) * i
+
 testcase = int(input().rstrip())
-sumDivisorGList = [0] * (100000 + 1)
 
 for _ in range(testcase):
     inputNum = int(input().rstrip())
     result = 0
-
-    for i in range(inputNum + 1, 0, -1):
-        result += (inputNum // i) * i
-
-    sumDivisorGList[inputNum] = result
 
     print(result)
