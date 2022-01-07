@@ -27,6 +27,6 @@ if __name__ == "__main__":
     while (number := int(read())) != 0:
         for prime_number in prime_list:
             sub_number = number - prime_number
-            if prime_list[sub_number] == True:
+            if number_list[sub_number] == True:
                 print(f"{number} = {prime_number} + {sub_number}")
                 break
