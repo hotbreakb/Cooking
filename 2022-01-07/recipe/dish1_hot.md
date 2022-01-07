@@ -5,6 +5,9 @@
 <br>
 최댓값까지 True로 배열을 만든 뒤에, 소수의 배수는 False로 바꾼다.
 
+<img width="687" alt="image" src="https://user-images.githubusercontent.com/64337152/148563286-802db21b-58a4-4d90-b743-846e9e40bd46.png">
+
+
 ```
 def isPrime(num) -> bool:
     if num % 2 == 0:
