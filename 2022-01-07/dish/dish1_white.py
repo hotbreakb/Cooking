@@ -19,15 +19,14 @@ if __name__ == "__main__":
         if number_list[i] == True:  # 소수라면
             for j in range(i + i, 1000001, i):  # i 자기자신을 제외한 i의 배수를 전부 False처리
                 number_list[j] = False
+
     # 소수 리스트를 가져옴
     prime_list = [i for i in range(2, 1000001) if number_list[i] == True]
-    # 소수 리스트를 set으로 설정
-    prime_set = set(prime_list)
 
     # 입력받은 값을 number에 저장, 만약 0이라면 반복문 탈출
     while (number := int(read())) != 0:
         for prime_number in prime_list:
-            # set은 찾는 시간이 O(1)이라서 한 번 사용해봤음!
-            if (sub_number := number - prime_number) in prime_set:
+            sub_number = number - prime_number
+            if prime_list[sub_number] == True:
                 print(f"{number} = {prime_number} + {sub_number}")
                 break
