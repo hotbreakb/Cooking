@@ -20,17 +20,21 @@ def max_eat_count(candies: list, length: int) -> int:
             temp_col_count = 0
             for j in range(length):
                 # 가로비교
+                # 만약 원하는 캔디(?)가 나오면
                 if candies[i][j] == candy:
                     temp_row_count += 1
-                elif temp_row_count > max_count:
-                    max_count = temp_row_count
+                # 다른 캔디가 나왔을 때, 그 이전에 이어진 캔디의 길이가 이전에 구했던 길이보다 긴 경우
+                else:
+                    if temp_row_count > max_count:
+                        max_count = temp_row_count
                     temp_row_count = 0
 
                 # 세로비교
                 if candies[j][i] == candy:
                     temp_col_count += 1
-                elif temp_col_count > max_count:
-                    max_count = temp_col_count
+                else:
+                    if temp_col_count > max_count:
+                        max_count = temp_col_count
                     temp_col_count = 0
 
             if temp_row_count > max_count:
@@ -46,7 +50,6 @@ def swap_values(sequence: list, i: int, j: int, x: int, y: int) -> None:
 
 
 if __name__ == "__main__":
-    # 50을 입력받았다면, 4900 * 50*50*4번 비교
     length = int(read())
     candy_list = [list(read().rstrip()) for _ in range(length)]
     general_max_count = max_eat_count(candy_list, length)
