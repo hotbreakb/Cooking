@@ -5,4 +5,4 @@
 |   Cook    |             Recipe             |
 | :-------: | :----------------------------: |
 | WhiteHyun | [✍️작성중✍️](./dish1_white.md) |
-| hotbreakb |  [✍️작성중✍️](./dish1_hot.md)  |
+| hotbreakb | [🎉작성완료🎉](./dish1_hot.md) |
