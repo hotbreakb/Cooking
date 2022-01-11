@@ -43,6 +43,9 @@ def switchListValue(board):
 
     for h in range(boardSize):
         for w in range(boardSize - 1):
+            if w != 0 and board[h][w] == board[h][w + 1]:
+                continue
+
             board[h][w], board[h][w + 1] = board[h][w + 1], board[h][w]
             countMaxChar = max(countMaxChar, getCountMaxChar(board))
             board[h][w], board[h][w + 1] = board[h][w + 1], board[h][w]
