@@ -19,7 +19,7 @@
 1. 레포지토리를 `fork`한다.
 2. [폴더 구조](#📁-폴더-구조-및-파일-규칙)에 맞게 파일을 만든다.
 3. 자신이 푼 문제의 소스코드를 업로드한다.
-4. [commit convention](#🤞-git-컨벤션)에 맞춰 커밋을 작성한다.
+4. [commit convention](#git-컨벤션)에 맞춰 커밋을 작성한다.
 5. `Pull Request`를 보낸다.
 6. 다른 사람들의 소스코드를 분석하며 자유롭게 코드리뷰를 진행한다.
 
@@ -40,12 +40,12 @@
  ...
 ```
 
-## Convention
+## 🤞 Convention
 
 한 문제를 풀고 커밋 후 PR을 보낼 것.
 즉, 커밋 하나당 PR 하나!
 
-### 🤞 git 컨벤션
+### git 컨벤션
 
 푼 문제를 커밋할 때는 **반드시** 다음과 같이 작성하도록 한다.
 
@@ -67,7 +67,7 @@ git commit -m "[플랫폼] 문제명" -m "문제주소"
 git commit -m "[BOJ] A+B" -m "https://www.acmicpc.net/problem/1000"
 ```
 
-### 📔 PR 규칙
+### PR 규칙
 
 - 제목도 git과 동일하게 작성
   - ex) [BOJ] A+B
@@ -76,7 +76,7 @@ git commit -m "[BOJ] A+B" -m "https://www.acmicpc.net/problem/1000"
 
 이해가 되지 않아도 `template`이 있으므로 각 항목에 맞게 작성하면 된다!
 
-## References
+## 📔 References
 
 1. [배너 디자인 아이디어 - Avocado34님](https://github.com/Avocado34)
 2. [💯 알고리즘 및 코딩 테스트 문제 풀이 챌린지 100 📝](https://github.com/ellynhan/challenge100-codingtest-study/blob/master/README.md)
