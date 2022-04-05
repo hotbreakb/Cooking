@@ -7,46 +7,50 @@
 # - 문제 번호를 이름으로 가지는
 # 파이썬 파일을 생성함.
 #
-# 사용법: ./boj.zsh [문제 번호] [음식 번호] [닉네임]
+# 사용법: ./boj.zsh [문제 번호] [닉네임]
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 if [ "$#" -eq 0 ]; then
   echo -n "백준 문제 번호: "
   read -r problem_number
-  echo -n "음식 번호: "
-  read -r dish_number
-  echo -n "닉네임(hot/white): "
-  read -r nick_name
-else
+  echo -n "닉네임: "
+  read -r nickname
+elif [ "$#" -eq 2 ]; then
   problem_number="$1"
-  dish_number="$2"
-  nick_name="$3"
+  nickname="$2"
+else
+  exit 1
 fi
+api_result=$(curl --request GET \
+  --url "https://solved.ac/api/v3/search/problem?query=${problem_number}&page=1&sort=id&direction=asc" \
+  --header 'Content-Type: application/json' | jq ".items | .[0]")
 
+problem_name=$(echo "$api_result" | jq ".titleKo")
+problem_name=${problem_name#\"}
+problem_name=${problem_name%\"}
+problem_name="${problem_number}번: $problem_name"
 
-problem_link="https://www.acmicpc.net/problem/$problem_number"
+# make directory if not exist.
+solution_folder="$DIR/boj/$nickname"
+mkdir -p "$solution_folder"
 
-problem_name=$(curl -s -N "$problem_link" | sed -n "s/^.*<title>\(.*\)<\/title>.*$/\1/p")
-
-# today's date
-today=$(date "+%Y/%m/%d")
-today_folder=$(date "+%Y-%m-%d")
-
-solution_file="$DIR/$today_folder/dish/dish${dish_number}_${nick_name}.py"
+solution_file="$solution_folder/$problem_number.py"
 
 
 
 # python version
 python_version=$(python3 --version)
 
+# today's date
+today=$(date "+%Y/%m/%d")
 
 echo "#" >> "$solution_file"
 echo "#  $problem_name" >> "$solution_file"
-echo "#  $problem_link" >> "$solution_file"
+echo "#  https://www.acmicpc.net/problem/$problem_number" >> "$solution_file"
 echo "#  Version: $python_version" >> "$solution_file"
 echo "#" >> "$solution_file"
-echo "#  Created by $nick_name on $today." >> "$solution_file"
+echo "#  Created by $nickname on $today." >> "$solution_file"
 echo "#" >> "$solution_file"
 echo -e "\n\nfrom sys import stdin\n\nread = stdin.readline\n\nif __name__ == \"__main__\":\n    pass" >> "$solution_file"
 
