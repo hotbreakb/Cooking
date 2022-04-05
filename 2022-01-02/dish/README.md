@@ -1,8 +1,0 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=timeAuto&height=300&section=header&text=🍱%20요리&fontSize=70&animation=fadeIn&fontAlignY=38)
-
-## 파도반 수열
-
-|   Cook    |              Dishes              |
-| :-------: | :------------------------------: |
-| WhiteHyun | [🎉작성완료🎉](./dish1_white.py) |
-| hotbreakb |  [🎉작성완료🎉](./dish1_hot.py)  |
