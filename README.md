@@ -33,12 +33,13 @@
  ┃   ┗ 📝 ...
  ┃
  ┣ 📂 programmers
- ┃ ┗ 📂 (주제)
- ┃   ┗ 📂 (users)
- ┃     ┃ 📝 (problem_number).py
- ┃     ┗ 📝 ...
+ ┃ ┗ 📂 (users)
+ ┃   ┃ 📝 (problem_name).py
+ ┃   ┗ 📝 ...
  ...
 ```
+
+> **만약 프로그래머스 문제를 풀 때 파일명에 띄어쓰기가 들어가는 경우, `-`로 띄어쓰기를 표기한다.**
 
 ## 🤞 Convention
 
