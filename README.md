@@ -69,8 +69,8 @@ git commit -m "[BOJ] A+B" -m "https://www.acmicpc.net/problem/1000"
 
 ### PR 규칙
 
-- 제목도 git과 동일하게 작성
-  - ex) [BOJ] A+B
+- 제목은 git과 유사하며, 끝에 `/ (닉네임)`을 작성한다.
+  - ex) [BOJ] A+B / WhiteHyun
 - 문제를 어떻게 풀었는지 아이디어를 설명한다.
 - 문제에 대한 회고를 작성한다. (`optional`)
 
