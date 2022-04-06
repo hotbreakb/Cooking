@@ -22,6 +22,34 @@ elif [ "$#" -eq 2 ]; then
 else
   exit 1
 fi
+
+# problem_number must be a number.
+if [ -n $problem_number ] && [ $problem_number -eq $problem_number ] 2>/dev/null; then
+	# OK. It is a number.
+else
+	echo "problem_number must be a number."
+	exit 1
+fi
+
+# install jq if not installed
+pkg_check=`which jq >/dev/null; echo $?`
+if [ $pkg_check -eq 0 ]; then
+  # jq is installed
+else
+  while true; do
+    read -p "스크립트를 사용하기위해 jq를 설치해야합니다. 설치하시겠습니까? [y/n]: " yn
+    case $yn in
+        [Yy]* ) brew install jq; break;;
+        [Nn]* ) exit 1;;
+        * ) echo "Please answer yes or no.";;
+    esac
+  done
+fi
+
+# 
+# =============================================================================
+# 
+
 api_result=$(curl --request GET \
   --url "https://solved.ac/api/v3/search/problem?query=${problem_number}&page=1&sort=id&direction=asc" \
   --header 'Content-Type: application/json' | jq ".items | .[0]")
