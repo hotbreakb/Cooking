@@ -1,8 +1,3 @@
-from array import array
-
-from click import command
-
-
 def solution(array, commands):
     answer = []
     for start, end, k in commands:
