@@ -33,17 +33,13 @@
  ┃   ┗ 📝 ...
  ┃
  ┣ 📂 programmers
- ┃ ┗ 📂 (주제)
- ┃   ┗ 📂 (users)
- ┃     ┃ 📝 (problem_number).py
- ┃     ┗ 📝 ...
+ ┃ ┗ 📂 (users)
+ ┃   ┃ 📝 (problem_name).py
+ ┃   ┗ 📝 ...
  ...
 ```
 
 ## 🤞 Convention
-
-한 문제를 풀고 커밋 후 PR을 보낼 것.
-즉, 커밋 하나당 PR 하나!
 
 ### git 컨벤션
 
@@ -71,6 +67,8 @@ git commit -m "[BOJ] A+B" -m "https://www.acmicpc.net/problem/1000"
 
 - 제목은 commit과 유사하게 작성하되, 끝에 `/ (닉네임)`을 작성한다.
   - ex) [BOJ] A+B / WhiteHyun
+- 여러 문제를 풀었을 경우 쉼표(`,`)를 기준으로 나누어 작성한다.
+  - ex) [PGS] 나누어 떨어지는 숫자 배열, 신고 결과 받기 / WhiteHyun
 - 문제를 어떻게 풀었는지 아이디어를 설명한다.
 - 문제에 대한 회고를 작성한다. (`optional`)
 
