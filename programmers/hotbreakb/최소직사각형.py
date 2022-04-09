@@ -1,6 +1,4 @@
 def solution(sizes):
-    answer = 0
-    cards = []
     width, height = 0, 0
     for card in sizes:
         card = sorted(card)
