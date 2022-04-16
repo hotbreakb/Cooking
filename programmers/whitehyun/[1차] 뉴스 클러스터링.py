@@ -8,6 +8,9 @@
 
 
 def union(collection_1, collection_2) -> list:
+    """
+    다중집합의 합집합을 구한다.
+    """
     temp_list = collection_1.copy()
     union_list = collection_1.copy()
 
@@ -20,6 +23,9 @@ def union(collection_1, collection_2) -> list:
 
 
 def intersection(collection_1: list, collection_2: list) -> list:
+    """
+    다중집합의 교집합을 구한다.
+    """
     temp_list = collection_1.copy()
     intersection_list = []
 
@@ -30,33 +36,33 @@ def intersection(collection_1: list, collection_2: list) -> list:
     return intersection_list
 
 
-def solution(str1: str, str2: str):
+def get_multiplet_sets(string: str) -> list:
+    """
+    문자열을 가지고 다중집합을 구한다.
+    """
+    multiple_set = []
+    for index in range(len(string) - 1):
+        if (element := string[index : index + 2]).isalpha():
+            multiple_set.append(element)
+    return multiple_set
+
+
+def solution(str1: str, str2: str) -> int:
     str1 = str1.lower()
     str2 = str2.lower()
-    str1_list = []
-    str2_list = []
-    stack = [str1[0]]
-    for char in str1[1:]:
-        char2 = stack.pop()
-        if (element := char2 + char).isalpha():
-            str1_list.append(element)
-        stack.append(char)
 
-    stack = [str2[0]]
-    for char in str2[1:]:
-        char2 = stack.pop()
-        if (element := char2 + char).isalpha():
-            str2_list.append(element)
-        stack.append(char)
+    multiple_set_1 = get_multiplet_sets(str1)
+    multiple_set_2 = get_multiplet_sets(str2)
 
-    if not str1_list and not str2_list:
+    if not multiple_set_1 and not multiple_set_2:
         return 65536
 
     return int(
-        len(intersection(str1_list, str2_list))
-        / len(union(str1_list, str2_list))
+        len(intersection(multiple_set_1, multiple_set_2))
+        / len(union(multiple_set_1, multiple_set_2))
         * 65536
     )
 
 
-print(solution("aa1+aa2", "AAAA12"))
+if __name__ == "__main__":
+    print(solution("aa1+aa2", "AAAA12"))
