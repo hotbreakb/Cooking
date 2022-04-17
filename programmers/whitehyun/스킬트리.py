@@ -10,19 +10,14 @@
 def solution(skills: str, skill_trees: list) -> int:
     count = 0  # 정답 변수
     for tree in skill_trees:
-        index = -1
+        skill_index_list = []
         for skill in skills:
-
-            temp_index = tree.find(skill)  # 스킬이 있는지 확인
-            if temp_index == -1:  # 찾지 못했다면 값을 크게 만들어버림
-                index = 21
-                continue
-
-            if index < temp_index:  # 순차적으로 스킬을 구성했다면 index 업데이트
-                index = temp_index
-            else:  # 아니면 스킬트리 잘못 짠 거임!
-                break
-        else:  # 정확한 스킬트리라면 for-else문에 의해 count 증가
+            temp_index = tree.find(skill)  # 인덱스를 구함
+            if temp_index == -1:  # 못찾았다면 21이라는 큰 값을 줌
+                temp_index = 21
+            skill_index_list.append(temp_index)
+        # 오름차순이라면 정확한 스킬트리!
+        if sorted(skill_index_list) == skill_index_list:
             count += 1
 
     return count
