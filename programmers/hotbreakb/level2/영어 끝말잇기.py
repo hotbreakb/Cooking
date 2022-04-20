@@ -3,7 +3,7 @@
 #  https://programmers.co.kr/learn/courses/30/lessons/12981
 #  Version: Python 3.8.9
 #
-#  Created by hotbreakb/level2 on 2022/04/18.
+#  Created by hotbreakb on 2022/04/18.
 #
 
 def solution(n, words):

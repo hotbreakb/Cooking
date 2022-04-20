@@ -3,7 +3,7 @@
 #  https://programmers.co.kr/learn/courses/30/lessons/42746
 #  Version: Python 3.8.9
 #
-#  Created by hotbreakb/retry on 2022/04/16.
+#  Created by hotbreakb on 2022/04/16.
 #
 
 from typing import OrderedDict

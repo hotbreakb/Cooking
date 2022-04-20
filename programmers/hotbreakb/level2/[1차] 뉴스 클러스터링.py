@@ -7,7 +7,7 @@
 #
 
 def solution(str1, str2):
-    answer = 0
+    value = 65536
     str1_words = list()
     str2_words = list()
 
@@ -30,9 +30,9 @@ def solution(str1, str2):
     intersection_num = len(str1_words) + len(str2_words) - union_sum
 
     if intersection_num == 0:
-        return 1
+        return value
 
-    return int((union_sum / intersection_num)*65536)
+    return int((union_sum / intersection_num)*value)
 
 
 def getWords(input_str: str) -> list:
@@ -43,7 +43,7 @@ def getWords(input_str: str) -> list:
         if ord(word[0]) < ord("a") or ord(word[0]) > ord("z") or ord(word[1]) < ord("a") or ord(word[1]) > ord("z"):
             continue
         words.append(word)
-    print(words)
+
     return words
 
 

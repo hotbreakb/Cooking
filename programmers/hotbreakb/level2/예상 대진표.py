@@ -3,7 +3,7 @@
 #  https://programmers.co.kr/learn/courses/30/lessons/12985
 #  Version: Python 3.8.9
 #
-#  Created by hotbreakb/level2 on 2022/04/18.
+#  Created by hotbreakb on 2022/04/18.
 #
 
 def solution(n, a, b):
@@ -16,12 +16,12 @@ def solution(n, a, b):
         if b & 1 == 0 and b-1 == a:
             return turn
 
-        a = getNextTurnNumber(a)
-        b = getNextTurnNumber(b)
+        a = get_next_turn_number(a)
+        b = get_next_turn_number(b)
         turn += 1
 
 
-def getNextTurnNumber(num: int) -> int:
+def get_next_turn_number(num: int) -> int:
     if num & 1 == 0:
         return num//2
     return (num+1)//2
