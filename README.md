@@ -34,10 +34,33 @@
  ┃
  ┣ 📂 programmers
  ┃ ┗ 📂 (users)
- ┃   ┃ 📝 (problem_name).py
- ┃   ┗ 📝 ...
+ ┃   ┗ 📂 (level) - optional
+ ┃     ┃ 📝 (problem_name).py
+ ┃     ┗ 📝 ...
  ...
 ```
+
+### 스크립트 파일
+
+되도록 `pgs.zsh`, `boj.zsh`와 같은 소스코드 자동화 스크립트를 사용한다.
+
+> boj.zsh는 jq를 사용하기 때문에, 없는 경우 설치할지 물어보게 됩니다. 당황하지 마시고 설치해주시면 됩니다.
+
+#### 예시 ⤵️
+
+- boj
+
+  ```
+  ./boj.zsh 12953 WhiteHyun
+  ./boj.zsh 1001 hotbreakb
+  ```
+
+- programmers
+  ```
+  ./pgs.zsh 49938 hotbreakb
+  ./pgs.zsh https://programmers.co.kr/learn/courses/30/lessons/49994 WhiteHyun
+  ```
+  - pgs.zsh는 (문제주소) (닉네임) 또는, (문제번호) (닉네임)과 같이 주소나 번호 아무거나 넣어서 활용할 수 있습니다.
 
 ## 🤞 Convention
 

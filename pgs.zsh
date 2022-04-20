@@ -53,6 +53,10 @@ problem_link="https://programmers.co.kr/learn/courses/30/lessons/$problem_number
 problem_name=$(curl -s -N "$problem_link" | sed -n "s/^.*<title>코딩테스트 연습 - \(.*\) \| 프로그래머스<\/title>.*$/\1/p")
 solution_file="$solution_folder/$problem_name.py"
 
+# 닉네임 뒤에 '/' 기호와 함께 level을 표시할 수도 있습니다. 이를 나누어주어야합니다.
+if [[ $nickname =~ "/" ]]; then
+  nickname="${nickname%%/*}"
+fi
 
 # python version
 python_version=$(python3 --version)
